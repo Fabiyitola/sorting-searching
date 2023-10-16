@@ -1,0 +1,24 @@
+PROCEDURE swap (x, y)
+VAR
+    x: INTEGER;
+    y: INTEGER;
+    z: INTEGER;
+BEGIN
+    z:= x;
+    x:= y;
+    y:= z;
+END
+
+arr:= [20, 10, 1, 3, 100, 3, 4, 6]
+PROCEDURE insertion_sort
+VAR
+    arr: ARRAY_OF INTEGER [8]
+    i: INTEGER;
+BEGIN
+    FOR i FROM 0 TO arr.length-1 DO
+     IF(arr[i] > arr[i+1]) {
+        swap (arr[i], arr[i+1])
+     }
+     END_IF
+    END_FOR
+END
